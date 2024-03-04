@@ -11,8 +11,8 @@ public class TwoRangesSum {
     	} else if(numberToSkip > lastInRow ) {
 			System.out.println("number to skip is bigger then the last");
 			
-		} else if (lastInRow > numberToSkip) {
-			for(int i=numberToSkip; i<=lastInRow;i++) {
+		} else if (lastInRow > numberToSkip || lastInRow == numberToSkip) {
+			for(int i=numberToSkip +1; i<=lastInRow;i++) {
 	    		counted  +=i;
 		
 	    	}
@@ -23,7 +23,7 @@ public class TwoRangesSum {
     }
     public static void main(String[] args) {
     	TwoRangesSum sum = new TwoRangesSum();
-    	sum.printSumOfTwoRanges(-50, -10);
+    	sum.printSumOfTwoRanges(5, 10);
     }
     
 }
